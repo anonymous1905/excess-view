@@ -15,6 +15,8 @@ app.use(express.static('public'));
 app.use(expressLayouts);
 
 app.set('layout', 'my-master-layout.ejs');
+//---------------------- Defaut values for view variables
+app.locals.myTitle = 'Express Views from 6';
 
 
 //------------------ ROUTES GO HERE
@@ -67,7 +69,8 @@ app.get('/accomplishments', (req, res, next) => {
 
   res.render('accomplishments-view.ejs', {
     accomplishmentsForView: accomplishmentsList,
-    featuredAccomplishment: accomplishmentsList[randomIndex]
+    featuredAccomplishment: accomplishmentsList[randomIndex],
+    myTitle: "Accomplishments - Express Views"
   });
 });
 
