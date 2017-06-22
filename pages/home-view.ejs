@@ -1,0 +1,15 @@
+
+<p> Hello, <%= viewNameVar %>! </p>
+<p> You are <%= viewAge %> years old </p>
+
+<p> Question: Who is Francesco Totti? </p>
+<p> Answer: The GOAT soccer player </p>
+
+ <% for (let i = 1; i <= 1000; i += 1) { %>
+
+   <% if (i % 2 === 0) { %>
+  <div class= 'red'> <%= i %> </div>
+ <% } else { %>
+  <div class='blue'> <%= i %> </div>
+ <% } %>
+<% } %>
